@@ -2,7 +2,7 @@
   "name": "node-typescript-starter",
   "version": "1.0.0",
   "description": "Node project starter with Typescript, ESLint and Prettier",
-  "main": "index.js",
+  "main": "build/index.js",
   "license": "MIT",
   "scripts": {
     "start": "node build/index.js",
