@@ -20,9 +20,14 @@ interface TaskDocument extends Document {
       type: String,
       enum: ['to do', 'in progress', 'done'],
       default: 'to do',
-      columnId:['to do', 'in progress', 'done'],
+      
     },
-
+    columnId: {
+      type: String,
+      enum: ['to do', 'in progress', 'done'],
+      default: 'to do',
+      
+    },
   }, { collection: 'tasks',timestamps: true });
   
   const Task: Model<TaskDocument> = mongoose.model<TaskDocument>('Task', taskSchema);
