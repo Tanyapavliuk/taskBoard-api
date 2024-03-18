@@ -5,6 +5,7 @@ interface TaskDocument extends Document {
   title: string;
   description?: string;
   status?: 'to do' | 'in progress' | 'done';
+  columnId?:'to do' | 'in progress' | 'done';
 }
 
   const taskSchema = new Schema<TaskDocument>({
@@ -18,7 +19,8 @@ interface TaskDocument extends Document {
     status: {
       type: String,
       enum: ['to do', 'in progress', 'done'],
-      default: 'to do'
+      default: 'to do',
+      columnId:['to do', 'in progress', 'done'],
     },
 
   }, { collection: 'tasks',timestamps: true });

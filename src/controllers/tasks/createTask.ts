@@ -5,7 +5,7 @@ import { Task } from '../../models/task';
 
 const createTask = async (req: Request, res: Response) => {
   try {
-    const { title, description, status = 'to do' } = req.body;
+    const { title, description, status = 'to do', columnId='to do' } = req.body;
     const boardId = req.params.boardId;
 
     const existingBoard = await Board.findById(boardId);
@@ -17,7 +17,8 @@ const createTask = async (req: Request, res: Response) => {
       boardId,
       title,
       description,
-      status
+      status, 
+      columnId
     });
 
     const savedTask = await newTask.save();

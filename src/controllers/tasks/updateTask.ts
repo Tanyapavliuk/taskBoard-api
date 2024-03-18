@@ -6,7 +6,7 @@ const updateTask = async (req: Request, res: Response) => {
   try {
     const taskId = req.params.taskId;
     
-    const { title, description, status } = req.body;
+    const { title, description, status, columnId } = req.body;
 
     const task: TaskDocument | null = await Task.findById(taskId);
 
@@ -22,6 +22,9 @@ const updateTask = async (req: Request, res: Response) => {
     }
     if (status) {
       task.status = status;
+    }
+    if (columnId) {
+      task.columnId = columnId;
     }
     const updatedTask = await task.save();
 
