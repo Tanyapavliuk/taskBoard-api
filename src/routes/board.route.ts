@@ -15,7 +15,7 @@ const boardRoute = () => {
 
   router.get('/boards/:boardId/tasks', getTasksByBoardId);
 
-  router.put('/boards/:id', updateBoard);
+  router.patch('/boards/:id', updateBoard);
 
   router.delete('/boards/:id', deleteBoard);
 
