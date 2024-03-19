@@ -10,12 +10,10 @@ METHOD: get
 
 - ('/boards/:boardId/tasks') - всі завдання для дошки з певним ІД
 
-METHOD: put 
-- ('/boards/:id') - оновити дані про description, name для дошки
-
-
 METHOD: patch 
-- ('/tasks/:taskId') - оновити задачу 
+- ('/tasks/:taskId') - оновити задачу
+  
+- ('/boards/:id') - оновити дані про description, name для дошки
 
 METHOD: delete 
 - ('/boards/:id') - видалити дошку
